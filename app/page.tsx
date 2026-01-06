@@ -34,6 +34,7 @@ export default function Home() {
             fill
             priority
             className="object-contain object-center"
+            style={{ transform: 'scale(1.15)' }}
             sizes="100vw"
           />
         </div>
@@ -44,7 +45,8 @@ export default function Home() {
             href="https://chat.whatsapp.com/HNhPGPVz1XT9KelvcSPmkM"
             target="_blank"
             rel="noopener noreferrer"
-            className="group relative flex items-center justify-center gap-3 overflow-hidden rounded-2xl bg-[#25D366] px-6 py-5 text-white shadow-[0_4px_20px_rgba(37,211,102,0.4)] transition-all duration-300 animate-pulse-slow hover:scale-105 active:scale-95 opacity-100"
+            className="group relative flex items-center justify-center gap-3 overflow-hidden rounded-2xl bg-[#25D366] px-6 py-5 text-white shadow-[0_4px_20px_rgba(37,211,102,0.4)] transition-transform duration-300 animate-pulse-slow hover:scale-105 active:scale-95"
+            style={{ opacity: 1 }}
           >
             {/* Efeito de Brilho Laminado */}
             <div className="absolute inset-0 -z-0">
