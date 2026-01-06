@@ -11,7 +11,7 @@ const config: Config = {
       keyframes: {
         pulse: {
           "0%, 100%": { transform: "scale(1)" },
-          "50%": { transform: "scale(1.02)" },
+          "50%": { transform: "scale(1.05)" },
         },
         shimmer: {
           "0%": { 
@@ -28,7 +28,7 @@ const config: Config = {
         },
       },
       animation: {
-        "pulse-slow": "pulse 4s ease-in-out infinite",
+        "pulse-slow": "pulse 6s ease-in-out infinite",
         shimmer: "shimmer 4s ease-in-out infinite",
       },
     },
