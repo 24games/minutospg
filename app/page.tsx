@@ -46,7 +46,7 @@ export default function Home() {
             target="_blank"
             rel="noopener noreferrer"
             className="group relative flex items-center justify-center gap-3 overflow-hidden rounded-2xl bg-[#25D366] px-6 py-5 text-white shadow-[0_4px_20px_rgba(37,211,102,0.4)] transition-transform duration-300 animate-pulse-slow hover:scale-105 active:scale-95"
-            style={{ opacity: 1 }}
+            style={{ opacity: 1, willChange: 'transform' }}
           >
             {/* Efeito de Brilho Laminado */}
             <div className="absolute inset-0 -z-0">
@@ -74,15 +74,17 @@ export default function Home() {
             {socialProofImages.map((image, index) => (
               <div
                 key={index}
-                className="relative h-[80vh] w-[70vw] flex-shrink-0 snap-start"
+                className="relative w-[70vw] flex-shrink-0 snap-start"
               >
-                <div className="relative h-full w-full overflow-hidden rounded-lg border border-[#25D366]/50">
+                <div className="relative w-full overflow-hidden rounded-md border border-[#25D366]">
                   <Image
                     src={image}
                     alt={`Prova social ${index + 1}`}
-                    fill
-                    className="object-cover"
+                    width={0}
+                    height={0}
+                    className="w-full h-auto"
                     sizes="(max-width: 768px) 70vw, 400px"
+                    style={{ width: '100%', height: 'auto' }}
                   />
                 </div>
               </div>
