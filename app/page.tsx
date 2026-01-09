@@ -12,6 +12,33 @@ const WhatsAppIcon = ({ className }: { className?: string }) => (
   </svg>
 );
 
+// Componente do Botão WhatsApp Reutilizável
+const WhatsAppButton = ({ className = "" }: { className?: string }) => (
+  <a
+    href="https://chat.whatsapp.com/LJVtXFXV5dLHXSXVSEtuVN"
+    target="_blank"
+    rel="noopener noreferrer"
+    className={`group relative flex items-center justify-center gap-3 overflow-hidden rounded-2xl bg-[#25D366] px-6 py-5 text-white shadow-[0_4px_20px_rgba(37,211,102,0.4)] transition-transform duration-300 animate-pulse-slow hover:scale-105 active:scale-95 ${className}`}
+    style={{ opacity: 1, willChange: 'transform' }}
+  >
+    {/* Efeito de Brilho Laminado */}
+    <div className="absolute inset-0 -z-0">
+      <div className="absolute h-full w-full -translate-x-full translate-y-full rotate-45 bg-gradient-to-r from-transparent via-white/40 to-transparent animate-shimmer"></div>
+    </div>
+
+    {/* Conteúdo do Botão (com z-index para ficar acima do shimmer) */}
+    <div className="relative z-10 flex items-center justify-center gap-3">
+      {/* Ícone WhatsApp */}
+      <WhatsAppIcon className="h-6 w-6 flex-shrink-0" />
+
+      {/* Texto do Botão */}
+      <span className="text-lg font-bold uppercase tracking-wide font-sans">
+        UNIRSE AL GRUPO
+      </span>
+    </div>
+  </a>
+);
+
 export default function Home() {
   // Array de imagens para o carrossel de prova social
   const socialProofImages = [
@@ -41,34 +68,17 @@ export default function Home() {
 
         {/* Botão WhatsApp - Posicionado na parte inferior */}
         <div className="absolute bottom-[calc(15%+150px)] left-1/2 w-[90%] -translate-x-1/2 z-10">
-          <a
-            href="https://chat.whatsapp.com/HNhPGPVz1XT9KelvcSPmkM"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group relative flex items-center justify-center gap-3 overflow-hidden rounded-2xl bg-[#25D366] px-6 py-5 text-white shadow-[0_4px_20px_rgba(37,211,102,0.4)] transition-transform duration-300 animate-pulse-slow hover:scale-105 active:scale-95"
-            style={{ opacity: 1, willChange: 'transform' }}
-          >
-            {/* Efeito de Brilho Laminado */}
-            <div className="absolute inset-0 -z-0">
-              <div className="absolute h-full w-full -translate-x-full translate-y-full rotate-45 bg-gradient-to-r from-transparent via-white/40 to-transparent animate-shimmer"></div>
-            </div>
-
-            {/* Conteúdo do Botão (com z-index para ficar acima do shimmer) */}
-            <div className="relative z-10 flex items-center justify-center gap-3">
-              {/* Ícone WhatsApp */}
-              <WhatsAppIcon className="h-6 w-6 flex-shrink-0" />
-
-              {/* Texto do Botão */}
-              <span className="text-lg font-bold uppercase tracking-wide font-sans">
-                UNIRSE AL GRUPO
-              </span>
-            </div>
-          </a>
+          <WhatsAppButton />
         </div>
       </section>
 
       {/* DOBRA 2: PROVA SOCIAL - CARROSSEL */}
       <section className="bg-[#050505] py-10">
+        {/* Headline */}
+        <h2 className="text-2xl md:text-3xl font-bold text-white text-center mb-8 px-4">
+          Resultados de los miembros
+        </h2>
+
         <div className="overflow-x-auto scrollbar-hide snap-x snap-mandatory">
           <div className="flex gap-4 px-4">
             {socialProofImages.map((image, index) => (
@@ -89,6 +99,13 @@ export default function Home() {
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+
+        {/* Botão WhatsApp abaixo do carrossel */}
+        <div className="flex justify-center mt-10 px-4">
+          <div className="w-[90%] max-w-md">
+            <WhatsAppButton />
           </div>
         </div>
       </section>
