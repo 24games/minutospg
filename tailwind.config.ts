@@ -13,6 +13,10 @@ const config: Config = {
           "0%, 100%": { transform: "scale(1)" },
           "50%": { transform: "scale(1.05)" },
         },
+        "pulse-elegant": {
+          "0%, 100%": { transform: "scale(1)", opacity: "1" },
+          "50%": { transform: "scale(1.1)", opacity: "0.9" },
+        },
         shimmer: {
           "0%": { 
             transform: "translateX(-100%) translateY(-100%) rotate(45deg)",
@@ -29,6 +33,7 @@ const config: Config = {
       },
       animation: {
         "pulse-slow": "pulse 6s ease-in-out infinite",
+        "pulse-elegant": "pulse-elegant 3s ease-in-out infinite",
         shimmer: "shimmer 4s ease-in-out infinite",
       },
     },
