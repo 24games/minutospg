@@ -3,7 +3,7 @@
 import { useEffect } from 'react';
 import Image from 'next/image';
 
-export default function PrePage() {
+export default function JuegoPage() {
   useEffect(() => {
     // Carrega o script do VSL do VTurb
     const scriptId = 'scr_69617663b6d47b63694a2008';
@@ -84,7 +84,7 @@ export default function PrePage() {
         {/* Botão CTA com pulsação elegante */}
         <div className="flex justify-center mb-4">
           <a
-            href="#"
+            href="https://x.afilialink.com/click?pid=1078&offer_id=1068"
             target="_blank"
             rel="noopener noreferrer"
             className="group relative flex items-center justify-center gap-3 overflow-hidden rounded-2xl bg-[#25D366] px-8 py-5 text-white shadow-[0_4px_20px_rgba(37,211,102,0.4)] transition-transform duration-300 animate-pulse-elegant hover:scale-105 active:scale-95"
@@ -116,7 +116,7 @@ export default function PrePage() {
             />
           </div>
 
-          {/* Texto de segurança */}
+          {/* Texto de seguridad */}
           <p className="text-base md:text-lg text-gray-300 text-center font-medium">
             100% seguro y regulado
           </p>
