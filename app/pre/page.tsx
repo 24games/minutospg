@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect } from 'react';
+import Image from 'next/image';
 
 export default function PrePage() {
   useEffect(() => {
@@ -16,8 +17,21 @@ export default function PrePage() {
   }, []);
 
   return (
-    <main className="min-h-screen bg-black">
-      <div className="container mx-auto px-4 py-10">
+    <main className="relative min-h-screen bg-black">
+      {/* Background Image */}
+      <div className="fixed inset-0 z-0">
+        <Image
+          src="/assets/pre/background-escuro.webp"
+          alt="Background"
+          fill
+          priority
+          className="object-cover object-center"
+          sizes="100vw"
+        />
+        <div className="absolute inset-0 bg-black/40"></div>
+      </div>
+
+      <div className="relative z-10 container mx-auto px-4 py-10">
         {/* Headline */}
         <h1 className="text-3xl md:text-4xl font-bold text-white text-center mb-4">
           Mira el vídeo a continuación para aprender a{' '}
@@ -72,7 +86,7 @@ export default function PrePage() {
         </div>
 
         {/* Botão CTA com pulsação elegante */}
-        <div className="flex justify-center mb-10">
+        <div className="flex justify-center mb-16">
           <a
             href="#"
             target="_blank"
@@ -92,6 +106,24 @@ export default function PrePage() {
               </span>
             </div>
           </a>
+        </div>
+
+        {/* Logo abaixo do botão */}
+        <div className="flex flex-col items-center justify-center mb-6">
+          <div className="relative w-32 h-32 md:w-40 md:h-40 mb-6">
+            <Image
+              src="/assets/pre/betista-esp-logo-circ.webp"
+              alt="Betista Logo"
+              fill
+              className="object-contain"
+              sizes="(max-width: 768px) 128px, 160px"
+            />
+          </div>
+
+          {/* Texto de segurança */}
+          <p className="text-base md:text-lg text-gray-300 text-center font-medium">
+            100% seguro y regulado
+          </p>
         </div>
       </div>
     </main>
