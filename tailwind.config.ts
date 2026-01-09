@@ -30,11 +30,20 @@ const config: Config = {
             opacity: "0"
           },
         },
+        "gradient-shift": {
+          "0%, 100%": {
+            backgroundPosition: "0% 50%"
+          },
+          "50%": {
+            backgroundPosition: "100% 50%"
+          },
+        },
       },
       animation: {
         "pulse-slow": "pulse 6s ease-in-out infinite",
         "pulse-elegant": "pulse-elegant 3s ease-in-out infinite",
         shimmer: "shimmer 4s ease-in-out infinite",
+        "gradient-shift": "gradient-shift 3s ease-in-out infinite",
       },
     },
   },

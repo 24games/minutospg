@@ -20,12 +20,25 @@ export default function PrePage() {
       <div className="container mx-auto px-4 py-10">
         {/* Headline */}
         <h1 className="text-3xl md:text-4xl font-bold text-white text-center mb-4">
-          Mira el vídeo a continuación para aprender a seguir la señal
+          Mira el vídeo a continuación para aprender a{' '}
+          <span 
+            className="inline-block"
+            style={{
+              backgroundImage: 'linear-gradient(90deg, #25D366, #20BA5A, #25D366, #20BA5A, #25D366)',
+              backgroundSize: '200% auto',
+              backgroundClip: 'text',
+              WebkitBackgroundClip: 'text',
+              WebkitTextFillColor: 'transparent',
+              animation: 'gradient-shift 3s ease-in-out infinite',
+            }}
+          >
+            seguir la señal
+          </span>
         </h1>
 
         {/* Sub-headline */}
         <p className="text-lg md:text-xl text-gray-300 text-center mb-8">
-          Después de ver el vídeo, haz clic en el botón y ve directo a la plataforma
+          Después de ver el vídeo, <strong className="text-white font-bold">haz clic en el botón</strong> y <strong className="text-white font-bold">ve directo a la plataforma</strong>
         </p>
 
         {/* VSL Container com bordas arredondadas e traçado verde degradê */}
@@ -48,12 +61,12 @@ export default function PrePage() {
 
         {/* Disclaimer */}
         <div className="mb-8 max-w-4xl mx-auto">
-          <p className="text-sm md:text-base text-gray-400 text-center leading-relaxed flex items-center justify-center gap-2">
-            <span className="inline-block text-2xl animate-pulse-elegant">
-              ⚠️
-            </span>
+          <p className="text-sm md:text-base text-gray-400 text-center leading-relaxed flex items-center justify-center gap-2 flex-wrap">
             <span>
               Para el horario pagante funciona, es esencial que hagas el depósito de 20 euros
+            </span>
+            <span className="inline-block text-lg md:text-xl animate-pulse-elegant">
+              ⚠️
             </span>
           </p>
         </div>
@@ -74,7 +87,7 @@ export default function PrePage() {
 
             {/* Conteúdo do Botão */}
             <div className="relative z-10">
-              <span className="text-lg md:text-xl font-bold uppercase tracking-wide font-sans">
+              <span className="text-2xl md:text-3xl font-extrabold uppercase tracking-wide font-sans">
                 Jugar ahora
               </span>
             </div>
