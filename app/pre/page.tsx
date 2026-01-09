@@ -33,7 +33,7 @@ export default function PrePage() {
 
       <div className="relative z-10 container mx-auto px-4 py-10">
         {/* Headline */}
-        <h1 className="text-3xl md:text-4xl font-bold text-white text-center mb-8">
+        <h1 className="text-4xl md:text-5xl font-extrabold text-white text-center mb-8 tracking-tight leading-tight" style={{ fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif', textShadow: '0 2px 8px rgba(0, 0, 0, 0.5)' }}>
           Mira el vídeo a continuación para aprender a{' '}
           <span 
             className="inline-block"
@@ -44,6 +44,7 @@ export default function PrePage() {
               WebkitBackgroundClip: 'text',
               WebkitTextFillColor: 'transparent',
               animation: 'gradient-shift 3s ease-in-out infinite',
+              textShadow: 'none',
             }}
           >
             seguir la señal
@@ -70,11 +71,11 @@ export default function PrePage() {
 
         {/* Disclaimer */}
         <div className="mb-8 max-w-4xl mx-auto">
-          <p className="text-xs md:text-sm text-gray-400 text-center flex items-center justify-center gap-2 flex-wrap">
-            <span>
+          <p className="text-sm md:text-base text-gray-300 text-center flex items-center justify-center gap-2 flex-wrap leading-relaxed">
+            <span className="font-medium">
               Debes depositar 20 euros para que funcione
             </span>
-            <span className="inline-block text-base md:text-lg animate-pulse-elegant">
+            <span className="inline-block text-lg md:text-xl animate-pulse-elegant">
               ⚠️
             </span>
           </p>
@@ -105,7 +106,7 @@ export default function PrePage() {
 
         {/* Logo abaixo do botão */}
         <div className="flex flex-col items-center justify-center mb-2">
-          <div className="relative w-32 h-32 md:w-40 md:h-40 mb-2">
+          <div className="relative w-32 h-32 md:w-40 md:h-40 mb-1">
             <Image
               src="/assets/pre/betista-esp-logo-circ.webp"
               alt="Betista Logo"
