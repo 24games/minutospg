@@ -33,7 +33,7 @@ export default function PrePage() {
 
       <div className="relative z-10 container mx-auto px-4 py-10">
         {/* Headline */}
-        <h1 className="text-3xl md:text-4xl font-bold text-white text-center mb-4">
+        <h1 className="text-3xl md:text-4xl font-bold text-white text-center mb-8">
           Mira el vídeo a continuación para aprender a{' '}
           <span 
             className="inline-block"
@@ -49,11 +49,6 @@ export default function PrePage() {
             seguir la señal
           </span>
         </h1>
-
-        {/* Sub-headline */}
-        <p className="text-lg md:text-xl text-gray-300 text-center mb-8">
-          Después de ver el vídeo, <strong className="text-white font-bold">haz clic en el botón</strong> y <strong className="text-white font-bold">ve directo a la plataforma</strong>
-        </p>
 
         {/* VSL Container com bordas arredondadas e traçado verde degradê */}
         <div className="mb-8 max-w-4xl mx-auto px-4">
@@ -75,18 +70,18 @@ export default function PrePage() {
 
         {/* Disclaimer */}
         <div className="mb-8 max-w-4xl mx-auto">
-          <p className="text-sm md:text-base text-gray-400 text-center leading-relaxed flex items-center justify-center gap-2 flex-wrap">
+          <p className="text-xs md:text-sm text-gray-400 text-center flex items-center justify-center gap-2 flex-wrap">
             <span>
-              Para el horario pagante funciona, es esencial que hagas el depósito de 20 euros
+              Debes depositar 20 euros para que funcione
             </span>
-            <span className="inline-block text-lg md:text-xl animate-pulse-elegant">
+            <span className="inline-block text-base md:text-lg animate-pulse-elegant">
               ⚠️
             </span>
           </p>
         </div>
 
         {/* Botão CTA com pulsação elegante */}
-        <div className="flex justify-center mb-16">
+        <div className="flex justify-center mb-4">
           <a
             href="#"
             target="_blank"
@@ -109,8 +104,8 @@ export default function PrePage() {
         </div>
 
         {/* Logo abaixo do botão */}
-        <div className="flex flex-col items-center justify-center mb-6">
-          <div className="relative w-32 h-32 md:w-40 md:h-40 mb-6">
+        <div className="flex flex-col items-center justify-center mb-2">
+          <div className="relative w-32 h-32 md:w-40 md:h-40 mb-2">
             <Image
               src="/assets/pre/betista-esp-logo-circ.webp"
               alt="Betista Logo"
