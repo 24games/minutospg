@@ -5,10 +5,10 @@ import { useEffect } from 'react';
 export default function TutorialPage() {
   useEffect(() => {
     // Carrega o script do VSL do VTurb
-    const scriptId = 'scr_681a894b61bf26ce0ffe49a7';
+    const scriptId = 'scr_69610b90da723d6f86862b72';
     if (!document.getElementById(scriptId)) {
       const s = document.createElement('script');
-      s.src = 'https://scripts.converteai.net/af053167-2542-4323-9c93-d010e7938eb5/players/681a894b61bf26ce0ffe49a7/player.js';
+      s.src = 'https://scripts.converteai.net/af053167-2542-4323-9c93-d010e7938eb5/players/69610b90da723d6f86862b72/v4/player.js';
       s.async = true;
       s.id = scriptId;
       document.head.appendChild(s);
@@ -25,40 +25,15 @@ export default function TutorialPage() {
 
         {/* VSL Container */}
         <div className="mb-10 max-w-4xl mx-auto">
-          <div
-            id="vid_681a894b61bf26ce0ffe49a7"
+          <vturb-smartplayer
+            id="vid-69610b90da723d6f86862b72"
             style={{
-              position: 'relative',
+              display: 'block',
+              margin: '0 auto',
               width: '100%',
-              padding: '177.77777777777777% 0 0',
+              maxWidth: '400px',
             }}
-          >
-            <img
-              id="thumb_681a894b61bf26ce0ffe49a7"
-              src="https://images.converteai.net/af053167-2542-4323-9c93-d010e7938eb5/players/681a894b61bf26ce0ffe49a7/thumbnail.jpg"
-              style={{
-                position: 'absolute',
-                top: 0,
-                left: 0,
-                width: '100%',
-                height: '100%',
-                objectFit: 'cover',
-                display: 'block',
-              }}
-              alt="thumbnail"
-            />
-            <div
-              id="backdrop_681a894b61bf26ce0ffe49a7"
-              style={{
-                WebkitBackdropFilter: 'blur(5px)',
-                backdropFilter: 'blur(5px)',
-                position: 'absolute',
-                top: 0,
-                height: '100%',
-                width: '100%',
-              }}
-            ></div>
-          </div>
+          ></vturb-smartplayer>
         </div>
 
         {/* Botão CTA */}
