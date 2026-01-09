@@ -5,10 +5,10 @@ import { useEffect } from 'react';
 export default function TutorialPage() {
   useEffect(() => {
     // Carrega o script do VSL do VTurb
-    const scriptId = 'scr_69610b90da723d6f86862b72';
+    const scriptId = 'scr_69613843b6d47b636949ca70';
     if (!document.getElementById(scriptId)) {
       const s = document.createElement('script');
-      s.src = 'https://scripts.converteai.net/af053167-2542-4323-9c93-d010e7938eb5/players/69610b90da723d6f86862b72/v4/player.js';
+      s.src = 'https://scripts.converteai.net/af053167-2542-4323-9c93-d010e7938eb5/players/69613843b6d47b636949ca70/v4/player.js';
       s.async = true;
       s.id = scriptId;
       document.head.appendChild(s);
@@ -26,7 +26,7 @@ export default function TutorialPage() {
         {/* VSL Container */}
         <div className="mb-10 max-w-4xl mx-auto">
           <vturb-smartplayer
-            id="vid-69610b90da723d6f86862b72"
+            id="vid-69613843b6d47b636949ca70"
             style={{
               display: 'block',
               margin: '0 auto',
