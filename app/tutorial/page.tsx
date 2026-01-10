@@ -38,7 +38,7 @@ export default function TutorialPage() {
         {/* Botão CTA */}
         <div className="flex justify-center mb-10">
           <a
-            href="https://x.afilialink.com/click?pid=1078&offer_id=1064"
+            href="https://x.afilialink.com/click?pid=1078&offer_id=1068"
             target="_blank"
             rel="noopener noreferrer"
             className="group relative flex items-center justify-center gap-3 overflow-hidden rounded-2xl bg-[#25D366] px-8 py-5 text-white shadow-[0_4px_20px_rgba(37,211,102,0.4)] transition-transform duration-300 animate-pulse-slow hover:scale-105 active:scale-95"
