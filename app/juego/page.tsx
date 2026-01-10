@@ -6,10 +6,10 @@ import Image from 'next/image';
 export default function JuegoPage() {
   useEffect(() => {
     // Carrega o script do VSL do VTurb
-    const scriptId = 'scr_69617663b6d47b63694a2008';
+    const scriptId = 'scr_6962d6cad57dbf78326cf305';
     if (!document.getElementById(scriptId)) {
       const s = document.createElement('script');
-      s.src = 'https://scripts.converteai.net/af053167-2542-4323-9c93-d010e7938eb5/players/69617663b6d47b63694a2008/v4/player.js';
+      s.src = 'https://scripts.converteai.net/af053167-2542-4323-9c93-d010e7938eb5/players/6962d6cad57dbf78326cf305/v4/player.js';
       s.async = true;
       s.id = scriptId;
       document.head.appendChild(s);
@@ -57,7 +57,7 @@ export default function JuegoPage() {
             <div className="rounded-lg overflow-hidden bg-black">
               <div style={{ borderRadius: '0.5rem', overflow: 'hidden' }}>
                 <vturb-smartplayer
-                  id="vid-69617663b6d47b63694a2008"
+                  id="vid-6962d6cad57dbf78326cf305"
                   style={{
                     display: 'block',
                     margin: '0 auto',
