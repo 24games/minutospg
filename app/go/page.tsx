@@ -3,13 +3,14 @@
 export default function GoPage() {
   return (
     <main className="relative min-h-screen bg-gradient-to-b from-black via-[#0a1a0a] to-black flex items-center justify-center px-4">
-      <div className="container mx-auto text-center py-20">
+      <div className="container mx-auto text-center py-10 md:py-20">
         {/* Headline */}
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white mb-12 leading-tight px-4">
+        <h1 className="text-5xl md:text-6xl lg:text-7xl font-black text-white mb-12 leading-tight px-4" style={{ fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif', textShadow: '0 4px 12px rgba(0, 0, 0, 0.8), 0 2px 6px rgba(0, 0, 0, 0.6)' }}>
           Carga tu{' '}
           <span 
-            className="inline-block bg-gradient-to-r from-[#25D366] via-[#20BA5A] to-[#25D366] bg-clip-text text-transparent"
+            className="inline-block"
             style={{
+              backgroundImage: 'linear-gradient(90deg, #25D366, #20BA5A, #25D366, #20BA5A, #25D366)',
               backgroundSize: '200% auto',
               backgroundClip: 'text',
               WebkitBackgroundClip: 'text',
@@ -21,8 +22,9 @@ export default function GoPage() {
           </span>
           {' '}y{' '}
           <span 
-            className="inline-block bg-gradient-to-r from-[#25D366] via-[#20BA5A] to-[#25D366] bg-clip-text text-transparent"
+            className="inline-block"
             style={{
+              backgroundImage: 'linear-gradient(90deg, #25D366, #20BA5A, #25D366, #20BA5A, #25D366)',
               backgroundSize: '200% auto',
               backgroundClip: 'text',
               WebkitBackgroundClip: 'text',
@@ -37,7 +39,7 @@ export default function GoPage() {
         {/* Botão CTA com pulsação elegante */}
         <div className="flex justify-center">
           <a
-            href="#"
+            href="https://x.afilialink.com/click?pid=1078&offer_id=1068"
             target="_blank"
             rel="noopener noreferrer"
             className="group relative flex items-center justify-center overflow-visible rounded-2xl bg-[#25D366] px-12 py-6 text-white shadow-[0_4px_30px_rgba(37,211,102,0.5)] transition-all duration-300 hover:scale-105 active:scale-95"
