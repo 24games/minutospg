@@ -38,12 +38,23 @@ const config: Config = {
             backgroundPosition: "100% 50%"
           },
         },
+        "pulse-border": {
+          "0%, 100%": {
+            opacity: "1",
+            transform: "scale(1)",
+          },
+          "50%": {
+            opacity: "0.3",
+            transform: "scale(1.05)",
+          },
+        },
       },
       animation: {
         "pulse-slow": "pulse 6s ease-in-out infinite",
         "pulse-elegant": "pulse-elegant 3s ease-in-out infinite",
         shimmer: "shimmer 4s ease-in-out infinite",
         "gradient-shift": "gradient-shift 3s ease-in-out infinite",
+        "pulse-border": "pulse-border 2s ease-in-out infinite",
       },
     },
   },
