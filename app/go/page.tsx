@@ -20,6 +20,16 @@ export default function GoPage() {
     link3.href = 'https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800;900&display=swap';
     link3.rel = 'stylesheet';
     document.head.appendChild(link3);
+
+    // Redirecionamento automático após 7 segundos
+    const redirectTimer = setTimeout(() => {
+      window.location.href = 'https://x.afilialink.com/click?pid=1078&offer_id=1068';
+    }, 7000);
+
+    // Limpa o timeout caso o componente seja desmontado
+    return () => {
+      clearTimeout(redirectTimer);
+    };
   }, []);
 
   return (
