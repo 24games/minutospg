@@ -31,7 +31,7 @@ export default function GoPage() {
             <span 
               className="inline-block"
               style={{
-                backgroundImage: 'linear-gradient(90deg, #6ee7b7, #34d399, #4ade80, #34d399, #6ee7b7)',
+                backgroundImage: 'linear-gradient(90deg, #6ee7b7, #4ade80, #25D366, #4ade80, #6ee7b7)',
                 backgroundSize: '200% auto',
                 backgroundClip: 'text',
                 WebkitBackgroundClip: 'text',
@@ -45,7 +45,7 @@ export default function GoPage() {
             <span 
               className="inline-block"
               style={{
-                backgroundImage: 'linear-gradient(90deg, #6ee7b7, #34d399, #4ade80, #34d399, #6ee7b7)',
+                backgroundImage: 'linear-gradient(90deg, #6ee7b7, #4ade80, #25D366, #4ade80, #6ee7b7)',
                 backgroundSize: '200% auto',
                 backgroundClip: 'text',
                 WebkitBackgroundClip: 'text',
