@@ -23,18 +23,23 @@ export default function WppPage() {
   // Você pode substituir pelo número do Benjamin quando tiver
   const whatsappContactLink = "https://wa.me/18128151753?text=Hola%2C%20quiero%20acceder%20al%20grupo%20VIP%20de%20se%C3%B1ales";
 
-  // Caminho para a imagem do perfil do Benjamin (ajuste quando tiver a imagem)
+  // Caminhos das imagens
   const benjaminProfileImage = "/assets/wpp/benjamin-profile.webp";
+  const backgroundImage = "/assets/wpp/background-lp-wpp.webp";
 
   return (
-    <main className="min-h-screen bg-[#e5ddd5]">
-      {/* Background Pattern do WhatsApp */}
-      <div 
-        className="fixed inset-0 opacity-10"
-        style={{
-          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23000' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
-        }}
-      ></div>
+    <main className="min-h-screen relative">
+      {/* Background do WhatsApp */}
+      <div className="fixed inset-0 w-full h-full">
+        <Image
+          src={backgroundImage}
+          alt="Background WhatsApp"
+          fill
+          priority
+          className="object-cover"
+          sizes="100vw"
+        />
+      </div>
 
       {/* Header - Barra verde WhatsApp */}
       <header className="bg-[#075E54] w-full py-3 px-4 relative z-10 shadow-sm">
@@ -50,22 +55,22 @@ export default function WppPage() {
           <div className="flex flex-col items-center py-8 px-6 border-b border-gray-100">
             {/* Avatar do Benjamin */}
             <div className="relative w-28 h-28 mb-5">
-              <div className="w-full h-full rounded-full overflow-hidden flex items-center justify-center bg-gradient-to-br from-[#25D366] to-[#20BA5A] relative">
-                {/* Imagem do Perfil do Benjamin - será carregada quando disponível */}
-                <div className="absolute inset-0 w-full h-full">
-                  <Image
-                    src={benjaminProfileImage}
-                    alt="Benjamin"
-                    width={112}
-                    height={112}
-                    className={`w-full h-full object-cover transition-opacity duration-200 ${imageLoaded ? 'opacity-100' : 'opacity-0'}`}
-                    onLoad={() => setImageLoaded(true)}
-                    onError={() => setImageError(true)}
-                  />
-                </div>
-                {/* Placeholder - inicial "B" - aparece se imagem não carregar */}
-                {(!imageLoaded || imageError) && (
-                  <span className="text-white text-4xl font-medium relative z-10">B</span>
+              <div className="w-full h-full rounded-full overflow-hidden relative">
+                {/* Imagem do Perfil do Benjamin */}
+                <Image
+                  src={benjaminProfileImage}
+                  alt="Benjamin"
+                  width={112}
+                  height={112}
+                  className="w-full h-full object-cover"
+                  onLoad={() => setImageLoaded(true)}
+                  onError={() => setImageError(true)}
+                />
+                {/* Placeholder - inicial "B" - aparece apenas se imagem não carregar */}
+                {imageError && (
+                  <div className="absolute inset-0 bg-gradient-to-br from-[#25D366] to-[#20BA5A] flex items-center justify-center">
+                    <span className="text-white text-4xl font-medium">B</span>
+                  </div>
                 )}
               </div>
             </div>
