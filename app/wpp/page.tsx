@@ -1,3 +1,8 @@
+"use client";
+
+import Image from "next/image";
+import { useState } from "react";
+
 // Componente do Ícone WhatsApp SVG
 const WhatsAppLogo = ({ className }: { className?: string }) => (
   <svg
@@ -11,64 +16,87 @@ const WhatsAppLogo = ({ className }: { className?: string }) => (
 );
 
 export default function WppPage() {
-  // Link do botão (mesmo da home page)
-  const whatsappGroupLink = "https://chat.whatsapp.com/IlH1JBwz1m5Ivo5O56Nize";
+  const [imageLoaded, setImageLoaded] = useState(false);
+  const [imageError, setImageError] = useState(false);
+
+  // Link para chamar no WhatsApp (usando o link da página /atend como referência)
+  // Você pode substituir pelo número do Benjamin quando tiver
+  const whatsappContactLink = "https://wa.me/18128151753?text=Hola%2C%20quiero%20acceder%20al%20grupo%20VIP%20de%20se%C3%B1ales";
+
+  // Caminho para a imagem do perfil do Benjamin (ajuste quando tiver a imagem)
+  const benjaminProfileImage = "/assets/wpp/benjamin-profile.webp";
 
   return (
-    <main className="min-h-screen bg-[#f1f2f6]">
+    <main className="min-h-screen bg-[#e5ddd5]">
+      {/* Background Pattern do WhatsApp */}
+      <div 
+        className="fixed inset-0 opacity-10"
+        style={{
+          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23000' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+        }}
+      ></div>
+
       {/* Header - Barra verde WhatsApp */}
-      <header className="bg-[#075E54] w-full py-4 px-4 shadow-md">
+      <header className="bg-[#075E54] w-full py-3 px-4 relative z-10 shadow-sm">
         <div className="flex items-center justify-center">
-          <WhatsAppLogo className="h-8 w-8 text-white" />
+          <WhatsAppLogo className="h-7 w-7 text-white" />
         </div>
       </header>
 
       {/* Conteúdo Principal */}
-      <div className="flex flex-col items-center justify-center min-h-[calc(100vh-64px)] px-6 py-12">
-        {/* Card Principal com sombra */}
-        <div className="bg-white rounded-lg shadow-lg w-full max-w-md p-8">
-          {/* Avatar do Grupo */}
-          <div className="flex justify-center mb-6">
-            <div className="relative w-32 h-32 rounded-full bg-gradient-to-br from-[#25D366] to-[#075E54] flex items-center justify-center shadow-md overflow-hidden">
-              {/* Placeholder ou Logo do Projeto - usando um círculo com inicial */}
-              <div className="w-full h-full flex items-center justify-center">
-                <span className="text-white text-5xl font-bold">C</span>
+      <div className="relative z-10 flex flex-col items-center justify-center min-h-[calc(100vh-64px)] px-4 py-8">
+        <div className="bg-white w-full max-w-md shadow-sm">
+          {/* Avatar e Nome do Contato */}
+          <div className="flex flex-col items-center py-8 px-6 border-b border-gray-100">
+            {/* Avatar do Benjamin */}
+            <div className="relative w-28 h-28 mb-5">
+              <div className="w-full h-full rounded-full overflow-hidden flex items-center justify-center bg-gradient-to-br from-[#25D366] to-[#20BA5A] relative">
+                {/* Imagem do Perfil do Benjamin - será carregada quando disponível */}
+                <div className="absolute inset-0 w-full h-full">
+                  <Image
+                    src={benjaminProfileImage}
+                    alt="Benjamin"
+                    width={112}
+                    height={112}
+                    className={`w-full h-full object-cover transition-opacity duration-200 ${imageLoaded ? 'opacity-100' : 'opacity-0'}`}
+                    onLoad={() => setImageLoaded(true)}
+                    onError={() => setImageError(true)}
+                  />
+                </div>
+                {/* Placeholder - inicial "B" - aparece se imagem não carregar */}
+                {(!imageLoaded || imageError) && (
+                  <span className="text-white text-4xl font-medium relative z-10">B</span>
+                )}
               </div>
             </div>
+
+            {/* Nome */}
+            <h1 className="text-2xl font-semibold text-gray-900 mb-2">
+              Benjamin
+            </h1>
+
+            {/* Status/Info - Headline natural */}
+            <p className="text-base text-gray-600 text-center px-4 leading-relaxed">
+              Escríbeme por WhatsApp y te envío el acceso al grupo VIP
+            </p>
           </div>
 
-          {/* Nome do Grupo */}
-          <h1 className="text-2xl font-bold text-gray-900 text-center mb-2">
-            Comunidad VIP - Vicente Tipster
-          </h1>
+          {/* Botão de Iniciar Conversa */}
+          <div className="px-6 py-6">
+            <a
+              href={whatsappContactLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block w-full bg-[#25D366] text-white text-center font-medium py-4 px-6 rounded-lg hover:bg-[#20BA5A] active:bg-[#1da851] transition-colors duration-150 shadow-md"
+            >
+              Enviar mensaje
+            </a>
+          </div>
 
-          {/* Subtexto */}
-          <p className="text-base text-gray-600 text-center mb-2">
-            Grupo de WhatsApp
-          </p>
-
-          {/* Descrição */}
-          <p className="text-sm text-gray-500 text-center mb-8">
-            Invitación al grupo de WhatsApp
-          </p>
-
-          {/* Botão Principal */}
-          <a
-            href={whatsappGroupLink}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="block w-full bg-[#25D366] text-white text-center font-semibold py-4 px-6 rounded-lg shadow-md hover:bg-[#20BA5A] transition-colors duration-200 mb-8"
-          >
-            UNIRME AL GRUPO
-          </a>
-
-          {/* Footer */}
-          <div className="text-center space-y-2">
+          {/* Footer WhatsApp Style */}
+          <div className="px-6 py-4 text-center border-t border-gray-100">
             <p className="text-xs text-gray-500">
-              ¿Aún no tienes WhatsApp? Descárgalo para móvil
-            </p>
-            <p className="text-xs text-gray-400">
-              Pulsa para unirte al chat.
+              Esta conversación se abrirá en WhatsApp
             </p>
           </div>
         </div>
