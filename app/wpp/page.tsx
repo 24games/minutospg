@@ -76,12 +76,12 @@ export default function WppPage() {
             </div>
 
             {/* Nome */}
-            <h1 className="text-2xl font-semibold text-gray-900 mb-2">
+            <h1 className="text-3xl font-bold text-gray-900 mb-3">
               Benjamin
             </h1>
 
             {/* Status/Info - Headline natural */}
-            <p className="text-base text-gray-600 text-center px-4 leading-relaxed">
+            <p className="text-lg font-semibold text-gray-800 text-center px-4 leading-relaxed">
               Escríbeme por WhatsApp y te envío el acceso al grupo VIP
             </p>
           </div>
@@ -92,9 +92,17 @@ export default function WppPage() {
               href={whatsappContactLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="block w-full bg-[#25D366] text-white text-center font-medium py-4 px-6 rounded-lg hover:bg-[#20BA5A] active:bg-[#1da851] transition-colors duration-150 shadow-md"
+              className="group relative block w-full bg-[#25D366] text-white text-center font-bold py-5 px-6 rounded-lg hover:bg-[#20BA5A] active:bg-[#1da851] transition-all duration-300 shadow-lg hover:shadow-xl animate-pulse-elegant overflow-hidden"
             >
-              Enviar mensaje
+              {/* Efeito de brilho animado */}
+              <div className="absolute inset-0 -z-0">
+                <div className="absolute h-full w-full -translate-x-full translate-y-full rotate-45 bg-gradient-to-r from-transparent via-white/30 to-transparent animate-shimmer"></div>
+              </div>
+              
+              {/* Texto do botão */}
+              <span className="relative z-10 text-lg">
+                Escríbeme para liberar el grupo
+              </span>
             </a>
           </div>
 
