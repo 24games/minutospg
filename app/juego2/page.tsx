@@ -34,21 +34,7 @@ export default function Juego2Page() {
       <div className="relative z-10 container mx-auto px-4 py-10">
         {/* Headline */}
         <h1 className="text-4xl md:text-5xl font-extrabold text-white text-center mb-8 tracking-tight leading-tight" style={{ fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif', textShadow: '0 2px 8px rgba(0, 0, 0, 0.5)' }}>
-          Mira el vídeo a continuación para aprender a{' '}
-          <span 
-            className="inline-block"
-            style={{
-              backgroundImage: 'linear-gradient(90deg, #25D366, #20BA5A, #25D366, #20BA5A, #25D366)',
-              backgroundSize: '200% auto',
-              backgroundClip: 'text',
-              WebkitBackgroundClip: 'text',
-              WebkitTextFillColor: 'transparent',
-              animation: 'gradient-shift 3s ease-in-out infinite',
-              textShadow: 'none',
-            }}
-          >
-            seguir la señal
-          </span>
+          Mira el vídeo de abajo para aprender a crear tu cuenta en la plataforma
         </h1>
 
         {/* VSL Container com bordas arredondadas e traçado verde degradê */}
@@ -98,7 +84,7 @@ export default function Juego2Page() {
             {/* Conteúdo do Botão */}
             <div className="relative z-10">
               <span className="text-2xl md:text-3xl font-extrabold uppercase tracking-wide font-sans">
-                Jugar ahora
+                DEPOSITAR AHORA
               </span>
             </div>
           </a>
