@@ -15,7 +15,7 @@ const WhatsAppIcon = ({ className }: { className?: string }) => (
 // Componente do Botão WhatsApp Reutilizável
 const WhatsAppButton = ({ className = "" }: { className?: string }) => (
   <a
-    href="https://chat.whatsapp.com/LJVtXFXV5dLHXSXVSEtuVN"
+    href="https://chat.whatsapp.com/LQsJxXD2W1j5q4sjeJr75M"
     target="_blank"
     rel="noopener noreferrer"
     className={`group relative flex items-center justify-center gap-3 overflow-hidden rounded-2xl bg-[#25D366] px-6 py-5 text-white shadow-[0_4px_20px_rgba(37,211,102,0.4)] transition-transform duration-300 animate-pulse-slow hover:scale-105 active:scale-95 ${className}`}
