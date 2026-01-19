@@ -19,9 +19,8 @@ export default function WppPage() {
   const [imageLoaded, setImageLoaded] = useState(false);
   const [imageError, setImageError] = useState(false);
 
-  // Link para chamar no WhatsApp (usando o link da página /atend como referência)
-  // Você pode substituir pelo número do Benjamin quando tiver
-  const whatsappContactLink = "https://wa.me/18128151753?text=Hola%2C%20quiero%20acceder%20al%20grupo%20VIP%20de%20se%C3%B1ales";
+  // Link para chamar no WhatsApp
+  const whatsappContactLink = "https://wa.me/18128151753?text=Quiero%20entrar%20en%20el%20grupo%20de%20se%C3%B1ales%20VIP";
 
   // Caminhos das imagens
   const benjaminProfileImage = "/assets/wpp/benjamin-profile.webp";
