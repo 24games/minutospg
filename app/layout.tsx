@@ -1,6 +1,19 @@
 import type { Metadata } from "next";
 import Script from "next/script";
+import { Montserrat, Inter } from "next/font/google";
 import "./globals.css";
+
+const montserrat = Montserrat({
+  subsets: ["latin"],
+  weight: ["400", "600", "700", "800", "900"],
+  variable: "--font-montserrat",
+});
+
+const inter = Inter({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800", "900"],
+  variable: "--font-inter",
+});
 
 export const metadata: Metadata = {
   title: "Minutos PG - Grupo WhatsApp",
@@ -15,7 +28,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR" className="bg-black">
-      <body className="antialiased bg-black">
+      <body className={`${montserrat.variable} ${inter.variable} antialiased bg-black font-sans`}>
         {/* Google Tag Manager */}
         <Script
           id="google-tag-manager"
