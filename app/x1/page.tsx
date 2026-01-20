@@ -6,8 +6,8 @@ import { useState } from "react";
 export default function X1Page() {
   const [benjaminError, setBenjaminError] = useState(false);
 
-  // Link do WhatsApp (herdado da Home)
-  const whatsappLink = "https://chat.whatsapp.com/GCQfJw2FbhqFZdRrlC0vab";
+  // Link do WhatsApp (mesmo da página /wpp)
+  const whatsappLink = "https://wa.me/18128151753?text=Quiero%20entrar%20en%20el%20grupo%20de%20se%C3%B1ales%20VIP";
 
   // Caminhos das imagens
   const benjaminProfileImage = "/assets/wpp/benjamin-profile.webp";
