@@ -157,7 +157,7 @@ export default function ComunidadPage() {
 
               {/* Texto do Card com melhor espaçamento */}
               <p className="text-base font-semibold text-gray-800 text-center leading-relaxed px-2 mb-0">
-                Únete ahora al grupo gratuito de Señales VIP de Benja y sigue las señales de minutos pagantes
+                Únete ahora al grupo Señales VIP de Benja y sigue los minutos
               </p>
             </div>
 
