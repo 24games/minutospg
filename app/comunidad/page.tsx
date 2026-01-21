@@ -136,7 +136,7 @@ export default function ComunidadPage() {
                   <div className="absolute inset-1 rounded-full overflow-hidden shadow-lg">
                     <Image
                       src={benjaminProfileImage}
-                      alt="Señales del Benja"
+                      alt="Señales VIP de Benja"
                       fill
                       className="object-cover"
                       onError={() => setBenjaminError(true)}
@@ -152,12 +152,12 @@ export default function ComunidadPage() {
 
                 {/* Nome com tipografia refinada */}
                 <h3 className="text-2xl font-black text-gray-900 mb-3 tracking-tight">
-                  Señales del Benja
+                  Señales VIP de Benja
                 </h3>
 
               {/* Texto do Card com melhor espaçamento */}
               <p className="text-base font-semibold text-gray-800 text-center leading-relaxed px-2 mb-0">
-                Entra ahora en la comunidad VIP de minutos pagantes de slots
+                Únete ahora al grupo gratuito de Señales VIP de Benja y sigue las señales de minutos pagantes
               </p>
             </div>
 
