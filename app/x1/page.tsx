@@ -22,6 +22,16 @@ export default function X1Page() {
     "/assets/comunidad/influencers espanha/suso-alvarez_e5e5.webp",
   ];
 
+  // Usernames do Instagram dos influenciadores
+  const influencersUsernames = [
+    "@sofiasuescun",
+    "@anabelpantoja00",
+    "@riverakiko",
+    "@omarmontes",
+    "@naimdarrechi",
+    "@oficialsusogh16",
+  ];
+
   return (
     <main className="min-h-screen bg-gradient-to-b from-[#0a0a0a] via-[#050505] to-black text-white relative overflow-hidden">
       {/* Header com carrossel infinito */}
@@ -62,7 +72,7 @@ export default function X1Page() {
       <div className="relative z-10 px-4 pt-8 pb-4 max-w-md mx-auto">
         {/* HEADLINE PRINCIPAL - Foco máximo, menor espaçamento */}
         <div className="text-center mb-6">
-          <h1 className="text-[1.9rem] md:text-5xl font-extrabold leading-[1.3] mb-4" style={{ fontFamily: 'var(--font-inter), system-ui, sans-serif', letterSpacing: '-0.02em' }}>
+          <h1 className="text-[1.6rem] md:text-5xl font-extrabold leading-[1.2] mb-4" style={{ fontFamily: 'var(--font-inter), system-ui, sans-serif', letterSpacing: '-0.02em' }}>
             <div className="block">
               <span className="text-white">Entra en el </span>
               <span
@@ -73,9 +83,7 @@ export default function X1Page() {
               >
                 grupo gratuito
               </span>
-            </div>
-            <div className="block">
-              <span className="text-white">de señales y </span>
+              <span className="text-white"> de señales y </span>
               <span
                 className="bg-gradient-to-r from-[#34E879] via-[#25D366] to-[#34E879] bg-clip-text text-transparent bg-[length:200%_auto] animate-gradient-move font-black"
                 style={{
@@ -94,7 +102,7 @@ export default function X1Page() {
               >
                 20€ en 100€
               </span>
-              <span className="text-white"> aún hoy</span>
+              <span className="text-white"> hoy mismo</span>
             </div>
           </h1>
         </div>
@@ -114,15 +122,17 @@ export default function X1Page() {
           </div>
           
           {/* Container principal com background do WhatsApp */}
-          <div className="relative bg-[#E5DDD5] backdrop-blur-sm">
-            {/* Padrão de background do WhatsApp (pontos sutis) */}
-            <div 
-              className="absolute inset-0 opacity-[0.03]"
-              style={{
-                backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23000000' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
-                backgroundSize: '60px 60px'
-              }}
-            ></div>
+          <div className="relative backdrop-blur-sm overflow-hidden">
+            {/* Background original do WhatsApp */}
+            <div className="absolute inset-0">
+              <Image
+                src="/assets/wpp/background-lp-wpp.webp"
+                alt="Background WhatsApp"
+                fill
+                className="object-cover"
+                sizes="100%"
+              />
+            </div>
             
             {/* Conteúdo do card */}
             <div className="relative z-10 px-6 py-6">
@@ -151,18 +161,14 @@ export default function X1Page() {
                 </div>
 
                 {/* Nome com tipografia refinada */}
-                <h3 className="text-2xl font-black text-gray-900 mb-3 tracking-tight">
+                <h3 className="text-2xl font-black text-gray-900 mb-0 tracking-tight">
                   Benjamin
                 </h3>
 
-              {/* Texto do Card com melhor espaçamento */}
-              <p className="text-base font-semibold text-gray-800 text-center leading-relaxed px-2 mb-0">
-                Escríbeme por WhatsApp y te envío el acceso al grupo VIP
-              </p>
             </div>
 
             {/* BOTÃO CTA DENTRO DO CARD - Estilo WhatsApp elegante */}
-            <div>
+            <div className="mt-2">
                 <a
                   href={whatsappLink}
                   target="_blank"
@@ -179,7 +185,7 @@ export default function X1Page() {
                     Unirme al grupo ahora
                   </span>
                 </a>
-              </div>
+            </div>
 
               {/* Texto informativo abaixo do botão */}
               <p className="text-[0.7rem] text-gray-600 text-center mt-2">
@@ -222,18 +228,21 @@ export default function X1Page() {
             <div className="relative z-10">
               {/* Headline principal */}
               <h2 className="text-2xl md:text-3xl font-black text-white mb-4 text-center">
-                Más de{" "}
-                <span className="bg-gradient-to-r from-[#25D366] via-[#20BA5A] to-[#25D366] bg-clip-text text-transparent bg-[length:200%_auto] animate-gradient-move font-extrabold inline-block">
-                  50 influencers
-                </span>{" "}
-                de España son embajadores oficiales
+                <div className="block">
+                  <span>Este es nuestro </span>
+                  <span className="bg-gradient-to-r from-[#25D366] via-[#20BA5A] to-[#25D366] bg-clip-text text-transparent bg-[length:200%_auto] animate-gradient-move font-extrabold inline-block">
+                    equipo de embajadores
+                  </span>
+                </div>
+                <div className="block">
+                  <span>oficiales</span>
+                </div>
               </h2>
 
               {/* Sub-headline */}
               <p className="text-sm md:text-base text-white/80 text-center mb-6 leading-relaxed">
-                Han publicado en sus perfiles de Instagram recomendando nuestro grupo
-                después de verificar personalmente los resultados. Únete al único grupo
-                100% confiable en España.
+                Celebrities y personalidades reconocidas que forman parte de nuestro equipo y comparten el grupo en sus perfiles de Instagram.
+                El único grupo 100% confiable<br />en el país. Asertividad verificada por I.A mes a mes. Celebrities y personalidades públicas validan nuestra seriedad.
               </p>
 
               {/* Grid de fotos dos influenciadores */}
@@ -241,7 +250,8 @@ export default function X1Page() {
                 {influencersImages.map((image, index) => (
                   <div
                     key={index}
-                    className="relative group cursor-pointer"
+                    className="relative group"
+                    style={{ cursor: 'default' }}
                   >
                     <div className="relative w-full aspect-square rounded-full overflow-hidden border-2 border-transparent bg-gradient-to-r from-[#25D366] via-[#20BA5A] to-[#25D366] p-0.5 group-hover:scale-110 transition-transform duration-300">
                       <div className="w-full h-full rounded-full overflow-hidden bg-gray-900">
@@ -254,15 +264,17 @@ export default function X1Page() {
                         />
                       </div>
                     </div>
-                    {/* Badge Instagram no hover */}
-                    <div className="absolute -top-1 -right-1 bg-gradient-to-br from-purple-600 to-pink-600 rounded-full p-1.5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 shadow-lg">
-                      <svg
-                        className="w-3 h-3 text-white"
-                        fill="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                    {/* Selo de verificado azul do Instagram - Sempre visível */}
+                    <div className="absolute -bottom-0.5 -right-0.5 w-4 h-4 md:w-5 md:h-5 rounded-full flex items-center justify-center shadow-sm z-10 bg-[#0095F6]">
+                      <svg className="w-full h-full" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="12" cy="12" r="12" fill="#0095F6"/>
+                        <path d="M8 12l2.5 2.5L16 9" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
                       </svg>
+                    </div>
+                    {/* Tooltip com @ do Instagram no hover */}
+                    <div className="absolute -bottom-8 left-1/2 -translate-x-1/2 px-2 py-1 bg-gray-900 text-white text-xs font-semibold rounded whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none z-20">
+                      {influencersUsernames[index]}
+                      <div className="absolute -top-1 left-1/2 -translate-x-1/2 w-2 h-2 bg-gray-900 rotate-45"></div>
                     </div>
                   </div>
                 ))}
