@@ -191,74 +191,117 @@ export default function X1Page() {
 
         {/* Call-to-action elegante - Direcionando para seção de influencers */}
         <div className="flex flex-col items-center my-4 md:my-6">
-          <p className="text-white/70 text-sm md:text-base text-center mb-3 font-semibold">
-            Descubre por qué más de 50 famosos confían en nosotros
-          </p>
-          <div className="flex items-center gap-2 text-[#25D366] animate-bounce-elegant">
-            <svg
-              className="w-5 h-5"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M19 14l-7 7m0 0l-7-7m7 7V3"
-              />
-            </svg>
+          <div className="relative group cursor-pointer">
+            {/* Efeito de brilho pulsante no fundo */}
+            <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-[#25D366]/10 via-[#20BA5A]/10 to-[#25D366]/10 blur-xl group-hover:blur-2xl transition-all duration-500 animate-pulse-slow"></div>
+            
+            {/* Container principal */}
+            <div className="relative flex flex-col items-center gap-3 px-6 py-4 rounded-2xl bg-gradient-to-br from-[#25D366]/5 to-[#20BA5A]/5 border border-[#25D366]/20 backdrop-blur-sm group-hover:border-[#25D366]/40 transition-all duration-300">
+              {/* Texto chamativo */}
+              <p className="text-sm md:text-base font-bold text-center">
+                <span className="text-white/90">Descubre por qué </span>
+                <span className="bg-gradient-to-r from-[#25D366] via-[#20BA5A] to-[#25D366] bg-clip-text text-transparent bg-[length:200%_auto] animate-gradient-move font-extrabold">
+                  más de 50 famosos
+                </span>
+                <span className="text-white/90"> confían en nosotros</span>
+              </p>
+              
+              {/* Seta animada elegante */}
+              <div className="relative">
+                <svg
+                  className="w-5 h-5 text-[#25D366] animate-bounce-elegant"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="3"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  viewBox="0 0 24 24"
+                  style={{
+                    filter: 'drop-shadow(0 0 6px rgba(37,211,102,0.6))'
+                  }}
+                >
+                  <path d="M19 9l-7 7-7-7" />
+                </svg>
+                {/* Rastro da seta */}
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="w-5 h-5 rounded-full bg-[#25D366]/20 animate-ping"></div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
-        {/* SECCIÓN DE INFLUENCERS - Card disruptivo e elegante */}
-        <div className="relative mb-8 md:mb-12">
-          <div className="relative bg-gradient-to-br from-gray-900/95 via-gray-800/95 to-gray-900/95 backdrop-blur-xl rounded-3xl shadow-[0_25px_50px_rgba(0,0,0,0.8)] border border-white/10 p-6 md:p-8 overflow-hidden">
-            {/* Efeitos de brilho no fundo */}
-            <div className="absolute top-0 right-0 w-64 h-64 bg-[#25D366]/10 rounded-full blur-3xl -z-0"></div>
-            <div className="absolute bottom-0 left-0 w-64 h-64 bg-[#20BA5A]/10 rounded-full blur-3xl -z-0"></div>
-
-            {/* Conteúdo do card */}
+        {/* PROVA SOCIAL - Card disruptivo e elegante sobre divulgação dos influencers */}
+        <div className="mb-8">
+          <div className="relative bg-gradient-to-br from-[#0a0a0a] via-[#1a1a1a] to-[#0a0a0a] backdrop-blur-sm rounded-3xl p-6 md:p-8 border border-[#25D366]/20 shadow-[0_20px_60px_rgba(37,211,102,0.15)] overflow-hidden">
+            {/* Efeito de brilho sutil no fundo */}
+            <div className="absolute top-0 right-0 w-64 h-64 bg-[#25D366]/5 rounded-full blur-3xl -z-0"></div>
+            <div className="absolute bottom-0 left-0 w-64 h-64 bg-[#20BA5A]/5 rounded-full blur-3xl -z-0"></div>
+            
             <div className="relative z-10">
-              {/* Headline principal */}
-              <h2 className="text-2xl md:text-3xl font-black text-white mb-4 text-center">
-                <div className="block">
-                  <span>Este es nuestro </span>
-                  <span className="bg-gradient-to-r from-[#25D366] via-[#20BA5A] to-[#25D366] bg-clip-text text-transparent bg-[length:200%_auto] animate-gradient-move font-extrabold inline-block">
-                    equipo
-                  </span>
+              {/* Headline com badge */}
+              <div className="flex flex-col items-center mb-6">
+                <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#25D366]/20 border border-[#25D366]/30 mb-3">
+                  <svg className="w-4 h-4 text-[#25D366]" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                  </svg>
+                  <span className="text-[#25D366] text-xs font-semibold">VERIFICADO</span>
                 </div>
-                <div className="block">
-                  <span>de </span>
-                  <span className="bg-gradient-to-r from-[#25D366] via-[#20BA5A] to-[#25D366] bg-clip-text text-transparent bg-[length:200%_auto] animate-gradient-move font-extrabold inline-block">
-                    embajadores
-                  </span>
-                  <span> oficiales</span>
-                </div>
-              </h2>
+                
+                <h2 className="text-xl md:text-2xl font-black text-center leading-tight mb-2">
+                  <div className="block">
+                    <span className="text-white">Este es nuestro </span>
+                    <span
+                      className="bg-gradient-to-r from-[#25D366] via-[#20BA5A] to-[#25D366] bg-clip-text text-transparent bg-[length:200%_auto] animate-gradient-move inline-block"
+                      style={{
+                        backgroundSize: "200% auto",
+                      }}
+                    >
+                      equipo
+                    </span>
+                  </div>
+                  <div className="block">
+                    <span className="text-white">de </span>
+                    <span
+                      className="bg-gradient-to-r from-[#25D366] via-[#20BA5A] to-[#25D366] bg-clip-text text-transparent bg-[length:200%_auto] animate-gradient-move inline-block"
+                      style={{
+                        backgroundSize: "200% auto",
+                      }}
+                    >
+                      embajadores
+                    </span>
+                    <span className="text-white"> oficiales</span>
+                  </div>
+                </h2>
+              </div>
 
-              {/* Sub-headline */}
-              <p className="text-sm md:text-base text-white/80 text-center mb-6 leading-relaxed">
-                Celebrities y personalidades reconocidas que forman parte de nuestro equipo y comparten el grupo en sus perfiles de Instagram.
-                El único grupo 100% confiable<br />en el país. Asertividad verificada por I.A mes a mes. Celebrities y personalidades públicas validan nuestra seriedad.
-              </p>
-
-              {/* Grid de fotos dos influenciadores */}
-              <div className="grid grid-cols-3 md:grid-cols-4 gap-3 md:gap-4 mb-6">
+              {/* Influenciadores - Grid elegante e responsivo */}
+              <div className="grid grid-cols-6 gap-2 md:gap-3 mb-6 justify-items-center">
                 {influencersImages.map((image, index) => (
                   <div
                     key={index}
-                    className="relative group"
+                    className="relative w-14 h-14 md:w-16 md:h-16 flex-shrink-0 group"
                     style={{ cursor: 'default' }}
                   >
-                    <div className="relative w-full aspect-square rounded-full overflow-hidden border-2 border-transparent bg-gradient-to-r from-[#25D366] via-[#20BA5A] to-[#25D366] p-0.5 group-hover:scale-110 transition-transform duration-300">
-                      <div className="w-full h-full rounded-full overflow-hidden bg-gray-900">
+                    {/* Círculo com gradiente verde fino - Traçado visível */}
+                    <div 
+                      className="absolute inset-0 rounded-full transition-transform duration-300 group-hover:scale-110"
+                      style={{
+                        background: 'linear-gradient(to right, #25D366, #20BA5A, #25D366)',
+                      }}
+                    >
+                      <div 
+                        className="absolute inset-[1.5px] rounded-full overflow-hidden"
+                        style={{
+                          backgroundColor: '#000'
+                        }}
+                      >
                         <Image
                           src={image}
                           alt={`Influencer ${index + 1}`}
                           fill
-                          className="object-cover"
-                          sizes="(max-width: 768px) 33vw, 25vw"
+                          className="object-cover rounded-full transition-transform duration-300 group-hover:scale-105"
+                          sizes="64px"
                         />
                       </div>
                     </div>
@@ -278,7 +321,45 @@ export default function X1Page() {
                 ))}
               </div>
 
-              {/* Botão WhatsApp elegante no final do card */}
+              {/* Copy melhorada com contexto e clareza */}
+              <div className="space-y-3">
+                <div className="flex items-start gap-3 bg-[#25D366]/5 rounded-xl p-4 border border-[#25D366]/10">
+                  <div className="flex-shrink-0 mt-0.5">
+                    <svg className="w-5 h-5 text-[#25D366]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <p className="text-sm md:text-base text-white/90 font-semibold leading-relaxed">
+                      Nuestros embajadores publican el grupo en sus <span className="text-[#25D366]">Instagram Stories y Reels</span>
+                    </p>
+                    <p className="text-xs md:text-sm text-white/60 mt-1 leading-relaxed">
+                      Celebrities y personalidades reconocidas que forman parte de nuestro equipo y comparten el grupo con su audiencia
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-3 bg-[#20BA5A]/5 rounded-xl p-4 border border-[#20BA5A]/10">
+                  <div className="flex-shrink-0 mt-0.5">
+                    <svg className="w-5 h-5 text-[#20BA5A]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <p className="text-sm md:text-base text-white/90 font-semibold leading-relaxed">
+                      El <span className="text-[#20BA5A]">único grupo 100% confiable</span>
+                      <br />
+                      en el país
+                    </p>
+                    <p className="text-xs md:text-sm text-white/60 mt-1 leading-relaxed">
+                      Asertividad verificada por I.A mes a mes.<br />
+                      Celebrities y personalidades públicas validan nuestra seriedad.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Botão WhatsApp elegante e discreto no final do card */}
               <div className="mt-6 pt-6 border-t border-white/5">
                 <a
                   href={whatsappLink}
@@ -311,35 +392,35 @@ export default function X1Page() {
         </div>
 
         {/* COPY DE FECHAMENTO - Card disruptivo e elegante com assertividade */}
-        <div className="relative mb-8 md:mb-12">
-          <div className="relative bg-gradient-to-br from-gray-900/95 via-gray-800/95 to-gray-900/95 backdrop-blur-xl rounded-3xl shadow-[0_25px_50px_rgba(0,0,0,0.8)] border border-white/10 p-6 md:p-8 overflow-hidden">
-            {/* Efeitos de brilho no fundo */}
-            <div className="absolute top-0 right-0 w-64 h-64 bg-[#25D366]/10 rounded-full blur-3xl -z-0"></div>
-            <div className="absolute bottom-0 left-0 w-64 h-64 bg-[#20BA5A]/10 rounded-full blur-3xl -z-0"></div>
-
-            {/* Conteúdo do card */}
+        <div className="mb-8">
+          <div className="relative bg-gradient-to-br from-[#0a0a0a] via-[#1a1a1a] to-[#0a0a0a] backdrop-blur-sm rounded-3xl p-6 md:p-8 border border-[#25D366]/20 shadow-[0_20px_60px_rgba(37,211,102,0.15)] overflow-hidden">
+            {/* Efeito de brilho sutil no fundo */}
+            <div className="absolute top-0 left-0 w-64 h-64 bg-[#25D366]/5 rounded-full blur-3xl -z-0"></div>
+            <div className="absolute bottom-0 right-0 w-64 h-64 bg-[#20BA5A]/5 rounded-full blur-3xl -z-0"></div>
+            
             <div className="relative z-10">
-              {/* Headline principal */}
-              <h2 className="text-2xl md:text-3xl font-black text-white mb-6 text-center">
-                Deja de jugar solo y{" "}
-                <span
-                  className="bg-gradient-to-r from-[#25D366] via-[#20BA5A] to-[#25D366] bg-clip-text text-transparent bg-[length:200%_auto] animate-gradient-move inline-block"
-                  style={{
-                    backgroundSize: "200% auto",
-                  }}
-                >
-                  tirar el dinero por la ventana
-                </span>
-              </h2>
+              {/* Headline com badge */}
+              <div className="flex flex-col items-center mb-6">
+                <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#25D366]/20 border border-[#25D366]/30 mb-4">
+                  <svg className="w-4 h-4 text-[#25D366]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                  </svg>
+                  <span className="text-[#25D366] text-xs font-semibold">RESULTADOS COMPROBADOS</span>
+                </div>
+                
+                <h2 className="text-xl md:text-2xl font-black text-center leading-tight mb-6">
+                  <span className="text-white">Deja de jugar solo y </span>
+                  <span className="text-white">tirar el dinero por la ventana</span>
+                </h2>
+              </div>
 
-              {/* Gráfico circular animado de assertividade */}
-              <div className="flex justify-center mb-6">
-                <div className="relative w-48 h-48 md:w-64 md:h-64">
-                  <svg
-                    className="transform -rotate-90 w-full h-full"
-                    viewBox="0 0 100 100"
-                  >
-                    {/* Círculo de fundo */}
+              {/* Elemento visual interativo - Gráfico circular de assertividade */}
+              <div className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-8 mb-6">
+                {/* Gráfico circular animado */}
+                <div className="relative w-32 h-32 md:w-40 md:h-40 flex-shrink-0">
+                  {/* Círculo de fundo */}
+                  <svg className="w-full h-full transform -rotate-90" viewBox="0 0 100 100">
+                    {/* Círculo de fundo (cinza) */}
                     <circle
                       cx="50"
                       cy="50"
@@ -348,7 +429,7 @@ export default function X1Page() {
                       stroke="rgba(255,255,255,0.1)"
                       strokeWidth="8"
                     />
-                    {/* Círculo de progresso (92%) */}
+                    {/* Círculo de progresso (verde animado) - 92% */}
                     <circle
                       cx="50"
                       cy="50"
@@ -358,10 +439,10 @@ export default function X1Page() {
                       strokeWidth="8"
                       strokeLinecap="round"
                       strokeDasharray={`${2 * Math.PI * 45}`}
-                      strokeDashoffset={`${2 * Math.PI * 45 * 0.08}`}
-                      className="animate-pulse-slow"
+                      strokeDashoffset={`${2 * Math.PI * 45 * (1 - 0.92)}`}
+                      className="transition-all duration-1000 ease-out"
                       style={{
-                        transition: "stroke-dashoffset 2s ease-in-out",
+                        filter: 'drop-shadow(0 0 8px rgba(37,211,102,0.5))'
                       }}
                     />
                     <defs>
@@ -381,42 +462,48 @@ export default function X1Page() {
                       ASERTIVIDAD
                     </span>
                   </div>
+                  {/* Partículas decorativas */}
+                  <div className="absolute top-2 right-2 w-2 h-2 bg-[#25D366] rounded-full animate-pulse"></div>
+                  <div className="absolute bottom-4 left-3 w-1.5 h-1.5 bg-[#20BA5A] rounded-full animate-pulse" style={{ animationDelay: '0.5s' }}></div>
+                </div>
+
+                {/* Estatística ao lado */}
+                <div className="flex flex-col gap-4 text-center md:text-left">
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 rounded-full bg-[#25D366]/20 flex items-center justify-center flex-shrink-0">
+                      <svg className="w-5 h-5 text-[#25D366]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      </svg>
+                    </div>
+                    <div>
+                      <p className="text-lg font-black text-white">9 de cada 10</p>
+                      <p className="text-xs text-white/60">señales son ganadoras</p>
+                    </div>
+                  </div>
                 </div>
               </div>
 
-              {/* Informações de assertividade */}
-              <div className="space-y-4 mb-6">
-                <div className="flex items-start gap-3">
-                  <div className="flex-shrink-0 mt-1">
-                    <svg
-                      className="w-5 h-5 text-[#25D366]"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                        clipRule="evenodd"
-                      />
+              {/* Copy contextualizada com credibilidade */}
+              <div className="space-y-3">
+                <div className="flex items-start gap-3 bg-[#25D366]/5 rounded-xl p-4 border border-[#25D366]/10">
+                  <div className="flex-shrink-0 mt-0.5">
+                    <svg className="w-5 h-5 text-[#25D366]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
                     </svg>
                   </div>
                   <div>
-                    <p className="text-base md:text-lg font-bold text-white mb-1">
-                      9 de cada 10 señales son ganadoras
+                    <p className="text-sm md:text-base text-white/90 font-semibold leading-relaxed">
+                      <span className="text-[#25D366]">Asertividad verificada</span> mes a mes
                     </p>
                     <p className="text-xs md:text-sm text-white/60 mt-1 leading-relaxed">
-                      Asertividad verificada mes a mes mediante análisis de IA
-                      que procesa cada señal antes de publicarla. Solo compartimos
-                      oportunidades con probabilidad de éxito comprobada.
-                    </p>
-                    <p className="text-xs md:text-sm text-white/60 mt-1 leading-relaxed">
-                      Con asertividad verificada y resultados comprobables
+                      Nuestro sistema de IA analiza más de 10.000 datos por minuto para darte la señal perfecta
                     </p>
                   </div>
                 </div>
+
               </div>
 
-              {/* Botão WhatsApp elegante no final do card */}
+              {/* Botão WhatsApp elegante e discreto no final do card */}
               <div className="mt-6 pt-6 border-t border-white/5">
                 <a
                   href={whatsappLink}
