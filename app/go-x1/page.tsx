@@ -7,7 +7,7 @@ export default function GoX1Page() {
   const [benjaminError, setBenjaminError] = useState(false);
 
   // Link do WhatsApp (mesmo da página /x1)
-  const whatsappLink = "https://wa.me/18128151753?text=Quiero%20entrar%20en%20el%20grupo%20de%20se%C3%B1ales%20VIP";
+  const whatsappLink = "https://wa.me/18128151753?text=Hola!%20Quiero%20recuperar%20mi%20acceso%20al%20grupo%20VIP";
 
   // Caminho da imagem de perfil
   const benjaminProfileImage = "/assets/wpp/benjamin-profile.webp";
