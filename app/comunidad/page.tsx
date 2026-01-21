@@ -72,7 +72,7 @@ export default function ComunidadPage() {
       <div className="relative z-10 px-4 pt-8 pb-4 max-w-md mx-auto">
         {/* HEADLINE PRINCIPAL - Foco máximo, menor espaçamento */}
         <div className="text-center mb-6">
-          <h1 className="text-[1.6rem] md:text-5xl font-extrabold leading-[1.2] mb-4" style={{ fontFamily: 'var(--font-inter), system-ui, sans-serif', letterSpacing: '-0.02em' }}>
+          <h1 className="text-[1.75rem] md:text-5xl font-extrabold leading-[1.2] mb-4" style={{ fontFamily: 'var(--font-inter), system-ui, sans-serif', letterSpacing: '-0.02em' }}>
             <div className="block">
               <span className="text-white">Entra en el </span>
               <span
@@ -83,15 +83,9 @@ export default function ComunidadPage() {
               >
                 grupo gratuito
               </span>
-              <span className="text-white"> de señales y </span>
-              <span
-                className="bg-gradient-to-r from-[#34E879] via-[#25D366] to-[#34E879] bg-clip-text text-transparent bg-[length:200%_auto] animate-gradient-move font-black"
-                style={{
-                  backgroundSize: "200% auto",
-                }}
-              >
-                transforma
-              </span>
+            </div>
+            <div className="block">
+              <span className="text-white">de señales y transforma</span>
             </div>
             <div className="block">
               <span
@@ -263,11 +257,20 @@ export default function ComunidadPage() {
                         backgroundSize: "200% auto",
                       }}
                     >
-                      equipo de embajadores
+                      equipo
                     </span>
                   </div>
                   <div className="block">
-                    <span className="text-white">oficiales</span>
+                    <span className="text-white">de </span>
+                    <span
+                      className="bg-gradient-to-r from-[#25D366] via-[#20BA5A] to-[#25D366] bg-clip-text text-transparent bg-[length:200%_auto] animate-gradient-move inline-block"
+                      style={{
+                        backgroundSize: "200% auto",
+                      }}
+                    >
+                      embajadores
+                    </span>
+                    <span className="text-white"> oficiales</span>
                   </div>
                 </h2>
               </div>
