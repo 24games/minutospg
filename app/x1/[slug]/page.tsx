@@ -10,6 +10,11 @@ const whatsappLinksMap: Record<string, string> = {
   ad10: "https://wa.me/18128151753?text=Quiero%20entrar%20en%20el%20grupo%20de%20se%C3%B1ales",
   ad06: "https://wa.me/18128151753?text=Quiero%20entrar%20en%20el%20grupo%20VIP",
   ad07: "https://wa.me/18128151753?text=Quiero%20rescatar%20mi%20acceso%20al%20grupo%20de%20se%C3%B1ales",
+  "adset07-cr2ad06": "https://wa.me/18128151753?text=Quiero%20rescatar%20mi%20acceso%20al%20grupo%20de%20se%C3%B1ales",
+  "adset07-cr1ad05": "https://wa.me/18128151753?text=Hola%20Quiero%20rescatar%20mi%20acceso%20al%20grupo%20VIP",
+  "adset07-cr3ad02": "https://wa.me/18128151753?text=Hola%20quiero%20rescatar%20mi%20acceso%20al%20grupo",
+  "adset07-cr3ad03": "https://wa.me/18128151753?text=Hola%20quiero%20rescatar%20mi%20acceso%20al%20grupo%20free",
+  "flex03-cr2ad06": "https://wa.me/18128151753?text=Hola!%20quiero%20recuperar%20mi%20acceso%20al%20grupo%20VIP",
 };
 
 export default function X1SlugPage() {
