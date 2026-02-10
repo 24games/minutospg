@@ -43,32 +43,22 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-black">
       {/* DOBRA 1: HERO - bloco imagem+botão escala ao máximo, proporcional, sem cortar */}
-      <section className="flex items-center justify-center min-h-screen w-full bg-black">
-        <div
-          className="flex flex-col h-screen w-full max-w-full"
-          style={{
-            width: 'min(100vw, (100vh - 96px) * 1080/1920)',
-          }}
-        >
-          <div className="relative flex-1 min-h-0 w-full overflow-hidden">
-            <Image
-              src="/assets/hero-bg-mobile.webp"
-              alt="Hero Background"
-              fill
-              priority
-              className="object-contain object-center"
-              sizes="100vw"
-              style={{
-                left: '0px',
-                top: '0px',
-                transform: 'scale(1.6)',
-                transformOrigin: 'center',
-              }}
-            />
-          </div>
-          <div className="flex-shrink-0 px-[5%] pb-6 pt-2">
-            <WhatsAppButton />
-          </div>
+      <section className="relative h-screen w-full bg-black overflow-hidden">
+        {/* Container da Imagem - ocupa todo o espaço */}
+        <div className="absolute inset-0">
+          <Image
+            src="/assets/hero-bg-mobile.webp"
+            alt="Hero Background"
+            fill
+            priority
+            className="object-cover object-center"
+            sizes="100vw"
+          />
+        </div>
+
+        {/* Botão WhatsApp - Posicionado na parte inferior */}
+        <div className="absolute bottom-0 left-0 right-0 px-[5%] pb-8">
+          <WhatsAppButton />
         </div>
       </section>
     </main>
