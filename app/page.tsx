@@ -51,34 +51,40 @@ export default function Home() {
 
   return (
     <main className="min-h-screen bg-black">
-      {/* DOBRA 1: HERO SECTION */}
-      <section className="relative h-screen w-full overflow-hidden">
-        {/* Imagem de Fundo */}
-        <div className="absolute inset-0 bg-black">
-          <Image
-            src="/assets/hero-bg-mobile.webp"
-            alt="Hero Background"
-            fill
-            priority
-            className="object-contain object-center"
-            style={{ transform: 'scale(1.15)' }}
-            sizes="100vw"
-          />
-        </div>
-
-        {/* Botão WhatsApp - Posicionado na parte inferior */}
-        <div className="absolute bottom-[calc(15%+150px)] left-1/2 w-[90%] -translate-x-1/2 z-10">
-          <WhatsAppButton />
+      {/* DOBRA 1: HERO - bloco imagem+botão escala ao máximo, proporcional, sem cortar */}
+      <section className="flex items-center justify-center min-h-screen w-full bg-black">
+        <div
+          className="flex flex-col h-screen w-full max-w-full"
+          style={{
+            width: 'min(100vw, (100vh - 96px) * 1080/1920)',
+          }}
+        >
+          <div className="relative flex-1 min-h-0 w-full overflow-hidden">
+            <Image
+              src="/assets/hero-bg-mobile.webp"
+              alt="Hero Background"
+              fill
+              priority
+              className="object-contain object-center"
+              sizes="100vw"
+              style={{
+                left: '18px',
+                top: '102px',
+                transform: 'scale(1.6)',
+                transformOrigin: 'top center',
+              }}
+            />
+          </div>
+          <div className="flex-shrink-0 px-[5%] pb-6 pt-2">
+            <WhatsAppButton />
+          </div>
         </div>
       </section>
 
       {/* DOBRA 2: PROVA SOCIAL - CARROSSEL */}
-      <section
-        className="bg-[#050505] pb-10 pt-[1.2cm]"
-        style={{ marginTop: "calc(-8vh - 80px)" }}
-      >
+      <section className="bg-[#050505] py-10">
         {/* Headline */}
-        <h2 className="text-2xl md:text-3xl font-bold text-white text-center mb-8 px-4">
+        <h2 className="text-2xl md:text-3xl font-bold text-white text-center mb-6 px-4">
           Resultados de los miembros
         </h2>
 

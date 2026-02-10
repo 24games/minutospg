@@ -64,7 +64,7 @@ export default function AtendPage() {
             fill
             priority
             className="object-contain object-center"
-            style={{ transform: 'scale(1.15)' }}
+            style={{ transform: 'scale(1.6)' }}
             sizes="100vw"
           />
         </div>
