@@ -59,10 +59,10 @@ export default function Home() {
               className="object-contain object-center"
               sizes="100vw"
               style={{
-                left: '18px',
-                top: '102px',
+                left: '0px',
+                top: '0px',
                 transform: 'scale(1.6)',
-                transformOrigin: 'top center',
+                transformOrigin: 'center',
               }}
             />
           </div>
