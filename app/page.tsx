@@ -40,15 +40,6 @@ const WhatsAppButton = ({ className = "" }: { className?: string }) => (
 );
 
 export default function Home() {
-  // Array de imagens para o carrossel de prova social
-  const socialProofImages = [
-    "/assets/prints/print1.webp",
-    "/assets/prints/print2.webp",
-    "/assets/prints/print3.webp",
-    "/assets/prints/print4.webp",
-    "/assets/prints/print5.webp",
-  ];
-
   return (
     <main className="min-h-screen bg-black">
       {/* DOBRA 1: HERO - bloco imagem+botão escala ao máximo, proporcional, sem cortar */}
@@ -76,44 +67,6 @@ export default function Home() {
             />
           </div>
           <div className="flex-shrink-0 px-[5%] pb-6 pt-2">
-            <WhatsAppButton />
-          </div>
-        </div>
-      </section>
-
-      {/* DOBRA 2: PROVA SOCIAL - CARROSSEL */}
-      <section className="bg-[#050505] py-10">
-        {/* Headline */}
-        <h2 className="text-2xl md:text-3xl font-bold text-white text-center mb-6 px-4">
-          Resultados de los miembros
-        </h2>
-
-        <div className="overflow-x-auto scrollbar-hide snap-x snap-mandatory">
-          <div className="flex gap-4 px-4">
-            {socialProofImages.map((image, index) => (
-              <div
-                key={index}
-                className="relative w-[70vw] flex-shrink-0 snap-start"
-              >
-                <div className="relative w-full overflow-hidden rounded-md border border-[#25D366]">
-                  <Image
-                    src={image}
-                    alt={`Prova social ${index + 1}`}
-                    width={0}
-                    height={0}
-                    className="w-full h-auto"
-                    sizes="(max-width: 768px) 70vw, 400px"
-                    style={{ width: '100%', height: 'auto' }}
-                  />
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Botão WhatsApp abaixo do carrossel */}
-        <div className="flex justify-center mt-10 px-4">
-          <div className="w-[90%] max-w-md">
             <WhatsAppButton />
           </div>
         </div>
