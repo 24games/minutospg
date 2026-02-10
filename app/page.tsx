@@ -42,10 +42,10 @@ const WhatsAppButton = ({ className = "" }: { className?: string }) => (
 export default function Home() {
   return (
     <main className="min-h-screen bg-black">
-      {/* DOBRA 1: HERO - bloco imagem+botão escala ao máximo, proporcional, sem cortar */}
-      <section className="relative h-screen w-full bg-black overflow-hidden">
-        {/* Container da Imagem - ocupa todo o espaço */}
-        <div className="absolute inset-0">
+      {/* DOBRA 1: HERO - imagem de fundo com botão sobreposto */}
+      <section className="relative h-screen w-full bg-black overflow-hidden flex flex-col items-center justify-end">
+        {/* Imagem de Fundo - ocupa todo o espaço */}
+        <div className="absolute inset-0 z-0">
           <Image
             src="/assets/hero-bg-mobile.webp"
             alt="Hero Background"
@@ -56,9 +56,14 @@ export default function Home() {
           />
         </div>
 
-        {/* Botão WhatsApp - Posicionado abaixo da frase "horarios que pagan" */}
-        <div className="absolute left-0 right-0 px-[5%]" style={{ bottom: 'calc(22% - 50px)' }}>
-          <WhatsAppButton />
+        {/* Botão WhatsApp - Sobreposto à imagem, abaixo do texto "horarios que pagan" */}
+        <div 
+          className="relative z-10 w-full px-[5%] flex justify-center" 
+          style={{ marginBottom: 'calc(22% - 50px)' }}
+        >
+          <div className="w-full max-w-md">
+            <WhatsAppButton />
+          </div>
         </div>
       </section>
     </main>
