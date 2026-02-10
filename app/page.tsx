@@ -57,7 +57,7 @@ export default function Home() {
         </div>
 
         {/* Botão WhatsApp - Posicionado abaixo da frase "horarios que pagan" */}
-        <div className="absolute left-0 right-0 px-[5%]" style={{ bottom: 'calc(22% - 20px)' }}>
+        <div className="absolute left-0 right-0 px-[5%]" style={{ bottom: 'calc(22% - 50px)' }}>
           <WhatsAppButton />
         </div>
       </section>
