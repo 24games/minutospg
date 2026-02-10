@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Script from "next/script";
 import { Montserrat, Inter } from "next/font/google";
+import { Suspense } from "react";
+import AdTracking from "@/components/AdTracking";
 import "./globals.css";
 
 const montserrat = Montserrat({
@@ -54,6 +56,12 @@ export default function RootLayout({
           ></iframe>
         </noscript>
         {/* End Google Tag Manager (noscript) */}
+        
+        {/* Ad Tracking - Captura ad_id e rastreia cliques em links WhatsApp */}
+        <Suspense fallback={null}>
+          <AdTracking />
+        </Suspense>
+        
         {children}
       </body>
     </html>
