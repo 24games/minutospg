@@ -72,8 +72,11 @@ export default function Home() {
         </div>
       </section>
 
-      {/* DOBRA 2: PROVA SOCIAL - CARROSSEL */}
-      <section className="bg-[#050505] py-10">
+      {/* DOBRA 2: PROVA SOCIAL - CARROSSEL - 0.5cm abaixo do botão */}
+      <section
+        className="bg-[#050505] pb-10 pt-[0.5cm]"
+        style={{ marginTop: "calc(-15vh - 150px)" }}
+      >
         {/* Headline */}
         <h2 className="text-2xl md:text-3xl font-bold text-white text-center mb-8 px-4">
           Resultados de los miembros
