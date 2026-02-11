@@ -22,9 +22,9 @@ interface WhatsAppButtonProps {
 // Componente do Botão WhatsApp Reutilizável com Facebook Pixel
 export default function WhatsAppButton({ href, className = "" }: WhatsAppButtonProps) {
   const handleClick = () => {
-    // Dispara evento AddToCart do Facebook Pixel
+    // Dispara evento InitiateCheckout do Facebook Pixel
     if (typeof window !== 'undefined' && (window as any).fbq) {
-      (window as any).fbq('track', 'AddToCart', {
+      (window as any).fbq('track', 'InitiateCheckout', {
         content_name: 'Grupo WhatsApp VIP',
         content_category: 'Minutos PG',
         value: 0,
