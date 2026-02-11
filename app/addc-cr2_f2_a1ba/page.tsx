@@ -1,7 +1,7 @@
 import Image from "next/image";
 import WhatsAppButton from "@/components/WhatsAppButton";
 
-export default function Home() {
+export default function AddcCr2F2A1baPage() {
   return (
     <main className="min-h-screen bg-black">
       {/* DOBRA 1: HERO - imagem de fundo com botão sobreposto */}
@@ -24,11 +24,10 @@ export default function Home() {
           style={{ marginTop: '15vh' }}
         >
           <div className="w-full max-w-md">
-            <WhatsAppButton href="https://chat.whatsapp.com/GCQfJw2FbhqFZdRrlC0vab" />
+            <WhatsAppButton href="https://wa.me/13292180578?text=Hola%20Benja" />
           </div>
         </div>
       </section>
     </main>
   );
 }
-
